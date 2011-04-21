@@ -42,6 +42,8 @@ def naturalCubicSpline(n,a=[],x=[], label=""):
 		b[j] = (((a[j+1] - a[j])/h[j]) - (h[j]*(c[j+1] + 2*c[j]))/3 )
 		d[j] = ((c[j+1] - c[j])/(3*h[j]))
 
+
+	print "--------- Natural ------------"
 	print "               ",label,"               "
 	print "---------------------------------------"
 	print "i".rjust(3), "x".rjust(adjust), "a".rjust(adjust), "b".rjust(adjust), "c".rjust(adjust), "d".rjust(adjust)
@@ -96,6 +98,8 @@ def clampedCubicSpline(n,a=[],x=[],label="",FPO=0.0,FPN=0.0):
 		c[j] = z[j] - u[j]*c[j+1]
 		b[j] = ((a[j+1] - a[j])/h[j]) - (h[j]*(c[j+1] + 2*c[j])/3)
 		d[j] = (c[j+1] - c[j])/(3*h[j])
+
+	print "-------- CLAMPED ------"
 
 	print "               ",label,"               "
 	print "---------------------------------------"
